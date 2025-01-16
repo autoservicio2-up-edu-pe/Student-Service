@@ -1,7 +1,15 @@
+import { Banner } from "./components/Banner";
+import { Login } from "./components/Login";
+import { Nav } from "./components/Nav";
+
 function App() {
   return (
     <>
-      <h1 className="mt-10 flex justify-center hover:justify-start">TAILWINDCSS TEST WITH GITHUBPAGES</h1>
+      <Nav />
+      <div className="flex p-8 bg-UP-COLOR3 bg-opacity-10">
+        <Login />
+        <Banner />
+      </div>
     </>
   );
 }
