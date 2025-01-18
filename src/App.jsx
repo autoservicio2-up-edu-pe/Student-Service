@@ -1,16 +1,19 @@
-import { Banner } from "./components/Banner";
-import { Login } from "./components/Login";
+import { Footer } from "./components/Footer";
 import { Nav } from "./components/Nav";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Buscar } from "./pages/Buscar";
+import { Home } from "./pages/Home";
 
 function App() {
   return (
-    <>
+    <Router>
       <Nav />
-      <div className="flex p-8 bg-UP-COLOR3 bg-opacity-10">
-        <Login />
-        <Banner />
-      </div>
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Search" element={<Buscar />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
